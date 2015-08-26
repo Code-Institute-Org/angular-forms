@@ -1,0 +1,48 @@
+
+<div ng-controller='FormController'>
+	<div class='container'>
+		<h1> Registration Form</h1>
+<form class='viewType' name="register_form" novalidate ng-submit="registerForm(register_form)">
+  
+    <div class="row">
+		<div class="col-offset-md-2 col-md-4">
+		  <label>Username</label>
+			<input  class="form-control"
+					type="text" 
+					placeholder="Enter Username" 
+					name="username" 
+					ng-model="register.username" 
+					ng-minlength=3 
+					ng-maxlength=20 
+					required />
+		</div>
+		
+	</div>
+	<div class="row">
+		<div class="col-offset-md-2 col-md-4">
+		  <label>Email</label>
+			<input  class="form-control"
+					type="email" 
+					placeholder="Enter email address" 
+					name="email" 
+					ng-model="register.email" 
+					ng-minlength=5 
+					ng-maxlength=40 
+					required  />
+		</div>
+	
+	</div>
+	
+	<br/><button type="submit" class="btn btn-primary">Submit</button>
+	
+	<br/>
+	name input valid: {{register_form.username.$valid}}
+	<br>
+	email input valid: {{register_form.email.$valid}}
+	<br>
+	Form valid: {{register_form.$valid}}
+	<br>
+
+</form>
+</div>
+</div>
