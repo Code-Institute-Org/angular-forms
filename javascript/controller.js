@@ -1,10 +1,10 @@
 angular.module('formControllers',[])
 .controller('FormController',function($scope) {
-  $scope.user = {};
+  $scope.register = {};
   $scope.wasSubmitted = false;
 
-  $scope.submit = function() {
-  	if ($scope.myForm.$valid) {
+  $scope.submit = function(myForm) {
+  	if (myForm.$valid) {
   		 $scope.wasSubmitted = true;
   		 //continue with form processing
   	}
@@ -61,14 +61,14 @@ angular.module('formControllers',[])
   	if (registerForm.$valid) {
   		 $scope.submitted = true;
   		 //continue with form processing
-		 //use a service to check for validity of username
-		 $scope.uniqueusername = false;
-		 //use a service to check for validity of email
-		 $scope.uniqueemail = true;
-		 if ($scope.uniqueusername &&
-				 $scope.uniqueemail ) {
-				// proceed to process form via backend service
-				// if successful route to next page
+  		 //use a service to check for validity of username
+  		 $scope.uniqueusername = false;
+  		 //use a service to check for validity of email
+  		 $scope.uniqueemail = true;
+  		 if ($scope.uniqueusername &&
+  				 $scope.uniqueemail ) {
+  				// proceed to process form via backend service
+  				// if successful route to next page
 				}
 		 }
   	else {

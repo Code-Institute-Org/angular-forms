@@ -2,7 +2,7 @@
 <div ng-controller='FormController'>
 	<div class='container'>
 		<h1> Registration Form</h1>
-<form class='viewType' name="register_form" novalidate ng-submit="registerForm(register_form)">
+<form class='viewType' name="register_form" novalidate ng-submit="submit(register_form)">
   
     <div class="row">
 		<div class="col-offset-md-2 col-md-4">
@@ -36,9 +36,9 @@
 	<br/><button type="submit" class="btn btn-primary">Submit</button>
 	
 	<br/>
-	name input valid: {{register_form.username.$valid}}
+	name input valid: {{register_form.username.$valid}}   scope value: {{register.username}}
 	<br>
-	email input valid: {{register_form.email.$valid}}
+	email input valid: {{register_form.email.$valid}}     scope value: {{register.email}}
 	<br>
 	Form valid: {{register_form.$valid}}
 	<br>
