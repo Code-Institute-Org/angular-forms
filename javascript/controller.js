@@ -1,16 +1,17 @@
 angular.module('formControllers',[])
 .controller('FormController',function($scope) {
   $scope.register = {};
-  $scope.wasSubmitted = false;
+  $scope.submitted = false;
 
   $scope.submit = function(myForm) {
   	if (myForm.$valid) {
-  		 $scope.wasSubmitted = true;
+  		 $scope.submitted = true;
   		 //continue with form processing
   	}
   	else {
   		alert("form is invalid")
-  	}  
+  	} 
+    $scope.submitted = true; 
   };
 })
 .controller('SelectionController',function($scope) {
