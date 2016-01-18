@@ -1,13 +1,22 @@
 
 input.ng-valid {
-  border: 2px solid green;
+	border: 2px solid green;
 }
+
 input.ng-subinvalid{
-  border: 2px solid red;
+	border: 2px solid red;
 }
 
-label { font-weight: normal; padding-top: 10px}
+label {
+	font-weight: normal;
+	padding-top: 10px
+}
 
-button:active { outline: none}
+button:active {
+	outline: none
+}
 
-p.error { padding-top: 8px; margin: 0px}
+p.error {
+	padding-top: 8px;
+	margin: 0px
+}
