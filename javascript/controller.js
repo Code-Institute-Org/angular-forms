@@ -6,9 +6,8 @@ angular.module('formControllers',[])
         $scope.submit = function(myForm) {
             if (myForm.$valid) {
                 $scope.submitted = true;
-  		          //continue with form processing
-            }
-            else {
+  		          // continue with form processing
+            } else {
                 alert("form is invalid")
             }
 
@@ -16,7 +15,18 @@ angular.module('formControllers',[])
         };
     })
     .controller('SelectionController',function($scope) {
-        $scope.items = [{name: 'one', age: 30 },{ name: 'two', age: 27 },{ name: 'three', age: 50 }];
+        $scope.items = [{
+            name: 'one',
+            age: 30
+        },
+        {
+            name: 'two',
+            age: 27
+        },
+        {
+            name: 'three',
+            age: 50
+        }];
         $scope.cars = ['mini','ferrari','bmw','VW'];
   
         $scope.wasSubmitted = false;
@@ -24,7 +34,6 @@ angular.module('formControllers',[])
 
         $scope.selectedCar = $scope.cars[1];
 
-  
         // for check box 
         $scope.checkboxModel = {
             fishing : true,
@@ -45,12 +54,11 @@ angular.module('formControllers',[])
 
         $scope.submit = function() {
             if ($scope.selectionForm.$valid) {
-  		          $scope.wasSubmitted = true;
+  		        $scope.wasSubmitted = true;
                 alert("selected car: " + $scope.selectedCar);
                 alert("selected item: " + $scope.selectedItem.name + " " + $scope.selectedItem.age);
-            }
-            else {
-  		          alert("form is invalid")
+            } else {
+  		        alert("form is invalid")
             }
         };
     })
@@ -63,19 +71,18 @@ angular.module('formControllers',[])
         $scope.registerForm = function(registerForm) {
             if (registerForm.$valid) {
   		          $scope.submitted = true;
-  		          //continue with form processing
-  		          //use a service to check for validity of username
+  		          // continue with form processing
+  		          // use a service to check for validity of username
   		          $scope.uniqueusername = false;
-  		          //use a service to check for validity of email
+  		          // use a service to check for validity of email
   		          $scope.uniqueemail = true;
   		          
                 if ($scope.uniqueusername &&
-  				          $scope.uniqueemail) {
-  				          // proceed to process form via backend service
-  				          // if successful route to next page
-				        }
-		        }
-            else {
+                    $scope.uniqueemail) {
+                    // proceed to process form via backend service
+                    // if successful route to next page
+				}
+            } else {
                 console.log("form is invalid");
                 $scope.submitted = true;
             }

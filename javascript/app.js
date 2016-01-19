@@ -19,5 +19,3 @@ angular.module('formsApp').config(function($routeProvider) {
 		})
 		.otherwise({redirectTo: '/'}); ;
 });
-
-	

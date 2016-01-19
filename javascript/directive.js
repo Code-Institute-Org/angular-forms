@@ -4,12 +4,10 @@ angular.module('formDirectives',[]).directive('ngSubValid', [function() {
     	restrict: 'A',
     	require: 'ngModel',
     	link: function(scope, element, attrs, ctrl) {
-
 			scope.$watch('submitted', function() {
 				if (scope.submitted && ctrl.$dirty && ctrl.$invalid) {
 					element.addClass(FOCUS_CLASS);
-				}
-				else {
+				} else {
 					element.removeClass(FOCUS_CLASS);
 				}		  
 			});
@@ -18,8 +16,7 @@ angular.module('formDirectives',[]).directive('ngSubValid', [function() {
     		}).bind('blur', function(evt) {
         		if (scope.submitted && ctrl.$dirty && ctrl.$invalid) {
         			element.addClass(FOCUS_CLASS);
-        		}
-				else {
+        		} else {
 					element.removeClass(FOCUS_CLASS);
 				}
     		});

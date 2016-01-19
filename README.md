@@ -1,26 +1,22 @@
-# forms 
+# Angular Forms 
 
-This project is an exaple of form validation to aid in
-learning the AngularJS frame work.
+This project is a skeleton application to learn the basics of angular routing
+
+To clone the application use the usual git clone command from a command tool:
+
+`git clone https://github.com/Code-Institute/angular-forms`
 
 
-To clone the application use the usual git clone command from a command tool
+Once that command has been completed you should see the project in a folder named *angular-forms*.
 
-1/ git clone https://github.com/lillylangtree/forms.git
+In order to run this code, you will need to run the following commands:
 
-2/ the clone will create a forms folder in the current folder
+1. `cd angular-forms`
+2. `npm install -g http-server` 
+	* *NOTE: If you are running on Windows, you will need to make sure that you're running the command tool as administrator. If you're using Mac OS X or Linux, make sure to run it as root using `sudo npm install -g http-server`*
 
-The application includes a package.json file which will allow you to run a 
-local http server. You need to have npm installed to do this.
+Once the above steps have been completed, you should be able to run the following command:
 
-cd to forms folder, the git clone creates this folder for you
+`npm start`
 
-1/ issue command npm start
-
-2/ in a browser navigate to localhost:8000 (you can change the port setting
-   in the package.json file if you wish)
-
-3/ Home page should appear
-
-If you don't have npm installed you can still run the application just
-copy the main folder to where your files get served from locally
+This should serve up the content, so you can now open up your browser and in the URL bar enter `http://127.0.0.1:8000`
