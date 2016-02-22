@@ -3,7 +3,7 @@
   "private": false,
   "version": "1.0.0",
   "description": "A example of how angularjs uses forms",
-  "repository": "https://github.com/Code-Institute/angular-forms",
+  "repository": "https://github.com/Code-Institute-Org/angular-forms.git",
   "license": "MIT",
   "devDependencies": { 
     "http-server": "^0.9.0",
