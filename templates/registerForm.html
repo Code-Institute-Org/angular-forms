@@ -45,9 +45,13 @@
 					<p class="error" ng-show="register_form.email.$error.email">That is not a valid email. Please input a valid email.</p>
 				</div>
 			</div>
-		
+			<!--<div class="error-container" ng-show="submitted"> 
+   				<p class="error" ng-show="!uniqueusername">username already taken</p>
+   				<p class="error" ng-show="!uniqueemail">email is already registered</p>
+			</div>-->
 			<br/>
 			<button type="submit" class="btn btn-primary">Submit</button>
+
 			<br/>
 			name input valid: {{register_form.username.$valid}}
 			<br/>
